@@ -106,23 +106,27 @@ st.markdown("""
 # Dicionário expandido com configurações específicas para cada agente
 agents = {
     "Acciona": {
-        "chatflowid": "bf7f7db3-f28c-47c9-8d51-5d9d708e2270",
+        "chatflowid": st.secrets["acciona_chatflow_id"],
         "welcome_message": "Bem-vindo ao Assistente Acciona! Estou aqui para ajudar com informações sobre a empresa Acciona."
     },
     "Mineração e Fertilizantes": {
-        "chatflowid": "73b8ac06-89d4-4796-9f34-b9027775e5bd",
+        "chatflowid": st.secrets["mineracao_chatflow_id"],
         "welcome_message": "Bem-vindo ao Assistente de Mineração e Fertilizantes! Como posso ajudar?"
     },
     "SAF (Sustainable Aviation Fuel)": {
-        "chatflowid": "fe638150-797d-4dcb-a97d-66dc3223212e",
+        "chatflowid": st.secrets["saf_chatflow_id"],
         "welcome_message": "Bem-vindo ao Assistente SAF! Estou aqui para ajudar com informações sobre Sustainable Aviation Fuel."
     }
 }
 
 # Sidebar com logo e seletor
 with st.sidebar:
-    # Adicionar logo na sidebar
-    st.image("colorido.png", width=150, use_column_width=True)
+    # Corrigindo o parâmetro depreciado e usando URL direto do GitHub
+    st.image(
+        "https://raw.githubusercontent.com/tipromon/bi/main/LOGO-COLORIDO-%E2%80%93-FUNDO-BRANCO.png",
+        width=150,
+        use_container_width=True  # Substituindo use_column_width por use_container_width
+    )
     
     # Título e seletor
     st.title("Selecione o Assistente")
