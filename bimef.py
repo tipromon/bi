@@ -105,7 +105,7 @@ st.markdown("""
 
 # Dicionário expandido com configurações específicas para cada agente
 agents = {
-    "Acciona": {
+    "Assistente BI - Acciona": {
         "chatflowid": st.secrets["acciona_chatflow_id"],
         "welcome_message": "Bem-vindo ao Assistente Acciona! Estou aqui para ajudar com informações sobre a empresa Acciona."
     },
@@ -116,6 +116,14 @@ agents = {
     "SAF (Sustainable Aviation Fuel)": {
         "chatflowid": st.secrets["saf_chatflow_id"],
         "welcome_message": "Bem-vindo ao Assistente SAF! Estou aqui para ajudar com informações sobre Sustainable Aviation Fuel."
+    },
+    "Assistente BI - VALE": {
+        "chatflowid": st.secrets["vale_chatflow_id"],
+        "welcome_message": "Bem-vindo ao Assistente VALE! Estou aqui para ajudar com informações sobre a VALE."
+    },
+    "Assistente BI - Hydro": {
+        "chatflowid": st.secrets["hydro_chatflow_id"],
+        "welcome_message": "Bem-vindo ao Assistente Hydro! Estou aqui para ajudar com informações sobre a Hydro."
     }
 }
 
