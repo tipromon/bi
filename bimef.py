@@ -87,6 +87,15 @@ st.markdown("""
             gap: 0 !important;
             padding: 0 !important;
         }
+        
+        /* Ocultar "Powered by Flowise" */
+        .chatbot-footer {
+            display: none !important;
+        }
+        
+        div[class*="powered-by"] {
+            display: none !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
